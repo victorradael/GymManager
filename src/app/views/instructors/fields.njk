@@ -1,0 +1,57 @@
+<div class="item">
+    <div>Avatar URL</div>
+    <div>
+        <input type="url" name="avatar_url" placeholder="http://" value="{{instructor.avatar_url}}">
+    </div>
+</div>
+
+<div class="item">
+    <div>Instructor</div>
+    <div>
+        <input type="text" name="name" placeholder="Name of Instructor (Full)" value="{{instructor.name}}">
+    </div>
+</div>
+
+<div class="item">
+    <div>Birthday</div>
+    <div>
+        <input type="date" name="birth" value="{{instructor.birth}}">
+    </div>
+</div>
+
+<div class="item">
+    <div>Gender</div>
+    <div>
+        <span>
+            <input 
+                type="radio" 
+                name="gender" 
+                value="M"
+                {% if instructor.gender == 'M'%}
+                checked
+                {%endif%}
+            >
+            Male
+        </span>
+        <span>
+            <input 
+                type="radio" 
+                name="gender" 
+                value="F"
+                {% if instructor.gender == 'F'%}
+                checked
+                {%endif%}
+            >
+            Female
+        </span>
+    </div>
+</div>
+
+<div class="item">
+    <div>Specialty</div>
+    <div>
+        <input type="text" name="services" placeholder="Separate specialties with commas" value="{{instructor.services}}">
+    </div>
+</div>
+
+<button type="submit">Save</button>
